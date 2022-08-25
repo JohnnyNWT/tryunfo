@@ -25,6 +25,7 @@ class Form extends React.Component {
           <input
             data-testid="name-input"
             type="text"
+            name="cardName"
             value={ cardName }
             onChange={ onInputChange }
             className="inputStyle"
@@ -35,6 +36,7 @@ class Form extends React.Component {
           <br />
           <textarea
             data-testid="description-input"
+            name="cardDescription"
             value={ cardDescription }
             onChange={ onInputChange }
           />
@@ -44,6 +46,7 @@ class Form extends React.Component {
           <input
             data-testid="attr1-input"
             type="number"
+            name="cardAttr1"
             value={ cardAttr1 }
             onChange={ onInputChange }
             className="inputStyle"
@@ -54,6 +57,7 @@ class Form extends React.Component {
           <input
             data-testid="attr2-input"
             type="number"
+            name="cardAttr2"
             value={ cardAttr2 }
             onChange={ onInputChange }
             className="inputStyle"
@@ -64,6 +68,7 @@ class Form extends React.Component {
           <input
             data-testid="attr3-input"
             type="number"
+            name="cardAttr3"
             value={ cardAttr3 }
             onChange={ onInputChange }
             className="inputStyle"
@@ -74,6 +79,7 @@ class Form extends React.Component {
           <input
             data-testid="image-input"
             type="text"
+            name="cardImage"
             value={ cardImage }
             onChange={ onInputChange }
             className="inputStyle"
@@ -83,6 +89,7 @@ class Form extends React.Component {
           Raridade
           <select
             data-testid="rare-input"
+            name="cardRare"
             value={ cardRare }
             onChange={ onInputChange }
             className="inputStyle"
@@ -93,13 +100,14 @@ class Form extends React.Component {
           </select>
         </label>
         <label htmlFor="checkbox">
-          Super Trunfo
           <input
             data-testid="trunfo-input"
+            name="cardTrunfo"
             checked={ cardTrunfo }
             onChange={ onInputChange }
             type="checkbox"
           />
+          Super Trunfo
         </label>
         <button
           data-testid="save-button"
