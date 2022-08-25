@@ -5,9 +5,65 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FAFAFA;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 45vw;
+  margin-left: 10px;
+  text-align: center;
+}
+
+label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #3D495C;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  line-height: 150%;
+  color: #3D495C;
+  margin-bottom: 80px;
+  margin-left: 15%;
+}
+
+.inputStyle {
+  box-sizing: border-box;
+  border: 1px solid #29313D;
+  border-radius: 3px;
+  padding: 12px;
+  margin-left: 12px;
+  width: 355px;
+}
+
+button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #003BE5;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  width: 115px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+textarea {
+  width: 328px;
+  height: 100px;
+  margin-left: 68px;
 }
