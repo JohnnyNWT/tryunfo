@@ -96,7 +96,7 @@ class Form extends React.Component {
           Super Trunfo
           <input
             data-testid="trunfo-input"
-            value={ cardTrunfo }
+            checked={ cardTrunfo }
             onChange={ onInputChange }
             type="checkbox"
           />
