@@ -13,6 +13,7 @@ class App extends React.Component {
     cardRare: '',
     cardTrunfo: false,
     isSaveButtonDisabled: true,
+    saveCards: [],
   };
 
   handleChange = ({ target }) => {
@@ -52,6 +53,47 @@ class App extends React.Component {
     });
   };
 
+  handleSaveButton = () => {
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardRare,
+      cardTrunfo,
+      cardImage,
+    } = this.state;
+    this.setState(
+      (estadoAnterior) => ({
+        saveCards: [...estadoAnterior.saveCards, {
+          name: cardName,
+          description: cardDescription,
+          attr1: cardAttr1,
+          attr2: cardAttr2,
+          attr3: cardAttr3,
+          image: cardImage,
+          trunfo: cardTrunfo,
+          rare: cardRare,
+        },
+        ] }),
+      () => {
+        this.setState({
+          cardName: '',
+          cardDescription: '',
+          cardAttr1: 0,
+          cardAttr2: 0,
+          cardAttr3: 0,
+          cardRare: 'normal',
+          cardTrunfo: false,
+          cardImage: '',
+          isSaveButtonDisabled: true,
+          hasTrunfo: false,
+        });
+      },
+    );
+  };
+
   render() {
     const {
       cardName,
@@ -63,12 +105,14 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       isSaveButtonDisabled,
+      hasTrunfo,
     } = this.state;
     return (
       <div>
         <h1>Adicionar nova carta</h1>
         <Form
           onInputChange={ this.handleChange }
+          onSaveButtonClick={ this.handleSaveButton }
           isSaveButtonDisabled={ isSaveButtonDisabled }
           cardName={ cardName }
           cardDescription={ cardDescription }
