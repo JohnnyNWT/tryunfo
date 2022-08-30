@@ -92,7 +92,9 @@ class App extends React.Component {
         });
       },
     );
-    { cardTrunfo ? this.setState({ hasTrunfo: true }) : cardTrunfo; }
+    if (cardTrunfo) {
+      this.setState({ hasTrunfo: cardTrunfo });
+    }
   };
 
   render() {
